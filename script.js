@@ -10,10 +10,10 @@ document.getElementById('order-button').addEventListener('click', () => {
   for (let i = 1; i <= 5; i++) {
     const checkbox = document.getElementById(`item${i}`);
     if (checkbox.checked) {
-      let quantity = prompt(`name${i}の個数を入力してください:`, 1);
+      let quantity = prompt(`${name[i - 1]}の個数を入力してください:`, 1);
       quantity = parseInt(quantity, 10);
       if (quantity > 0) {
-        items.push({ item: `name${i}`, quantity });
+        items.push({ item: `${name[i - 1]}`, quantity });
         totalPrice += prices[i - 1] * quantity;
       }
     }
