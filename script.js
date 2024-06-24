@@ -3,7 +3,7 @@ let orderLog = [];
 document.getElementById('order-button').addEventListener('click', () => {
   const orders = document.getElementById('orders');
   const items = [];
-  const prices = [100, 110, 120, 130, 140];
+  const prices = [150, 150, 150, 150, 150];
   let totalPrice = 0;
 
   for (let i = 1; i <= 5; i++) {
