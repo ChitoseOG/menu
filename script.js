@@ -3,16 +3,17 @@ let orderLog = [];
 document.getElementById('order-button').addEventListener('click', () => {
   const orders = document.getElementById('orders');
   const items = [];
+  const name = ["わらび餅ドリンクいちご", "わらび餅ドリンクブルーベリー", "色付き炭酸白桃", "色付き炭酸みかん", "オレンジジンジャー"];
   const prices = [150, 150, 150, 150, 150];
   let totalPrice = 0;
 
   for (let i = 1; i <= 5; i++) {
     const checkbox = document.getElementById(`item${i}`);
     if (checkbox.checked) {
-      let quantity = prompt(`商品${i}の個数を入力してください:`, 1);
+      let quantity = prompt(`name${i}の個数を入力してください:`, 1);
       quantity = parseInt(quantity, 10);
       if (quantity > 0) {
-        items.push({ item: `商品${i}`, quantity });
+        items.push({ item: `name${i}`, quantity });
         totalPrice += prices[i - 1] * quantity;
       }
     }
